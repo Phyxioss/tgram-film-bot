@@ -5,7 +5,7 @@ const request = require('request')
 bot.onText(/\/movie (.+)/, function(msg, match){
    const movie = match[1]
    const chatId = msg.chat.id
-   request(`http://www.omdbapi.com/?apikey=bfcf3dd6&t=${movie}`, function(error, response , body){
+   request(`http://www.omdbapi.com/?apikey=apikey&t=${movie}`, function(error, response , body){
         if(!error && response.statusCode == 200) {
             bot.sendMessage(chatId, '__Looking For__' + movie + '...', {parse_mode: 'Markdown'})
             .then(function(msg){
