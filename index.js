@@ -1,5 +1,5 @@
 const TelegramBot = require('node-telegram-bot-api');
-const token = '1672409239:AAF1RCimaouZs2NHUkO_Dsal6boy5mEE6WQ'
+const token = 'token'
 const bot = new TelegramBot(token, {polling: true})
 const request = require('request')
 bot.onText(/\/movie (.+)/, function(msg, match){
